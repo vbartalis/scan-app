@@ -1,0 +1,7 @@
+# LF everywhere: the project targets Windows, Linux and macOS.
+* text=auto eol=lf
+
+# Recorded scan data is binary.
+*.bin binary
+*.dll binary
+*.cti binary

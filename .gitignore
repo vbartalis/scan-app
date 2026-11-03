@@ -1,0 +1,9 @@
+﻿.superpowers/
+bin/
+obj/
+
+spikes/
+data/
+
+docs/*
+!docs/images/

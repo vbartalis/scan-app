@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PlatformTarget>x64</PlatformTarget>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <!-- SICK's GenIStream SDK, bundled in lib/sick (see THIRD-PARTY-NOTICES.md). -->
+    <SickLibDir>$(MSBuildThisFileDirectory)..\..\lib\sick</SickLibDir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="Sick.GenIStreamDotNet">
+      <HintPath>$(SickLibDir)\Sick.GenIStreamDotNet.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <!-- Native dependencies of the wrapper; copied beside every executable that references this project. -->
+  <ItemGroup>
+    <None Include="$(SickLibDir)\GenIStreamDotNetInterop.dll;$(SickLibDir)\*_MD_VC120_v3_1.dll;$(SickLibDir)\SICKGigEVisionTL.cti;$(SickLibDir)\libeay32MD.dll;$(SickLibDir)\ssleay32MD.dll"
+          Link="%(Filename)%(Extension)"
+          CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ScanApp.Core\ScanApp.Core.csproj" />
+  </ItemGroup>
+
+</Project>
