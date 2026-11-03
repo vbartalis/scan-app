@@ -4,6 +4,12 @@ An exploratory desktop workbench for a **SICK Ruler3020** (Ruler3000 family) las
 
 > **Status: archived (November 2026).** This is a research record, not a maintained tool. The conclusion: without an encoder, the travel axis of a hand-pushed pass can be estimated well enough to get recognisable, often good-looking models, but not reliably accurate ones. See [Limitations](#limitations).
 
+## The rig
+
+The scanner hangs from a carriage that runs on a linear rail. The rail rests on two improvised supports (here, stacks of boxes), and the object lies on the desk under the laser line; in this photo, a TV remote. The rail's motor and encoder did not work, so every pass is pushed by hand, and nothing on the rig measures how far the carriage has moved.
+
+![The rig: a SICK Ruler3000 on a hand-pushed carriage over a linear rail, with a TV remote under it](docs/images/rig.jpg)
+
 ## What it looks like
 
 A single pass of a small figure, as a height map (top view, blue low, yellow high) and as a 3D point cloud:
